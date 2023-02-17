@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../presentation/splash/splash_page.dart';
+import 'package:quiz_app/presentation/quiz/quiz_page.dart';
+import '../presentation/home/home_page.dart';
 
 part 'router.gr.dart';
 
@@ -8,7 +9,12 @@ part 'router.gr.dart';
   replaceInRouteName: 'Page,Route',
   routes: [
     AutoRoute(
-      page: SplashPage,
+      path: '/',
+      page: HomePage,
+    ),
+    AutoRoute(
+      path: '/quiz/:quizType',
+      page: QuizPage,
     ),
   ],
 )
