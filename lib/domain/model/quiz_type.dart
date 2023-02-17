@@ -1,0 +1,4 @@
+enum QuizType {
+  boolean,
+  multiOptions,
+}
