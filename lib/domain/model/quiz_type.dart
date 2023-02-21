@@ -22,4 +22,14 @@ enum QuizType {
         return 'multi-options';
     }
   }
+
+  @override
+  String displayName() {
+    switch (this) {
+      case QuizType.boolean:
+        return 'True or False Quiz';
+      case QuizType.multiOptions:
+        return 'One Answer Quiz';
+    }
+  }
 }
