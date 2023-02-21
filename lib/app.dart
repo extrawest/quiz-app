@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/router/router.dart';
 
-import 'presentation/app_repository_provoider.dart';
+import 'router.dart';
+import 'widgets/app_repository_provider.dart';
 
 final _router = AppRouter();
 
