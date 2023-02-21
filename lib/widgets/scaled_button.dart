@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class ScaledButton extends StatefulWidget {
   const ScaledButton({
     super.key,
-    required this.builder,
+    required this.child,
     required this.onPressed,
   });
 
-  final Widget Function(BuildContext context, bool isPressed) builder;
+  final Widget child;
   final VoidCallback onPressed;
 
   @override
@@ -69,7 +69,7 @@ class _ScaledButtonState extends State<ScaledButton>
             isPressed = false;
           });
         },
-        child: widget.builder(context, isPressed),
+        child: widget.child,
       ),
     );
   }

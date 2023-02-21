@@ -15,18 +15,18 @@ class MenuOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScaledButton(
       onPressed: onPressed,
-      builder: (context, _) => Container(
+      child: Container(
         height: 150,
         alignment: Alignment.center,
-        // padding: const EdgeInsets.all(64),
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(color: Colors.blue),
+          color: Theme.of(context).cardColor,
+          border: Border.all(color: Theme.of(context).dividerColor),
           borderRadius: const BorderRadius.all(Radius.circular(24)),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
               blurRadius: 5,
-              color: Colors.grey,
+              color: Theme.of(context).shadowColor,
             ),
           ],
         ),

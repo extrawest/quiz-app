@@ -55,19 +55,19 @@ class _AnswerState extends State<Answer> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return ScaledButton(
       onPressed: widget.onPressed,
-      builder: (context, isPressed) => SlideTransition(
+      child: SlideTransition(
         position: _animation,
         child: Container(
           decoration: BoxDecoration(
-            color: isPressed ? Colors.blue : Colors.white,
+            color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(40),
             border: Border.all(
-              color: Colors.blue,
+              color: Theme.of(context).dividerColor,
               width: 2,
             ),
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
-                color: Colors.grey,
+                color: Theme.of(context).shadowColor,
                 blurRadius: 5,
               ),
             ],
@@ -76,10 +76,7 @@ class _AnswerState extends State<Answer> with TickerProviderStateMixin {
           child: Center(
             child: Text(
               widget.answer,
-              style: TextStyle(
-                fontSize: 20,
-                color: isPressed ? Colors.white : Colors.black,
-              ),
+              style: const TextStyle(fontSize: 20),
             ),
           ),
         ),
