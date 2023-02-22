@@ -1,17 +1,22 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 
 import 'quiz_result_model.dart';
 
-part 'quiz_history_model.freezed.dart';
 part 'quiz_history_model.g.dart';
 
-@freezed
-class QuizHistoryModel with _$QuizHistoryModel {
-  const factory QuizHistoryModel({
-    required DateTime date,
-    required List<QuizResultModel> quizes,
-  }) = _QuizHistoryModel;
+@HiveType(typeId: 1)
+class QuizHistoryModel {
+  const QuizHistoryModel({
+    required this.date,
+    required this.quizes,
+  });
 
-  factory QuizHistoryModel.fromJson(Map<String, dynamic> json) =>
-      _$QuizHistoryModelFromJson(json);
+  @HiveField(0)
+  final DateTime date;
+  @HiveField(1)
+  final List<QuizResultModel> quizes;
+
+  String get key => date.toIso8601String();
+
+  static const boxName = 'quizes';
 }

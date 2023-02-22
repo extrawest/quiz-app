@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             padding: const EdgeInsets.only(right: 16),
             icon: const Icon(Icons.history_outlined),
-            onPressed: () => {},
+            onPressed: () => context.pushRoute(const HistoryRoute()),
           ),
         ],
       ),

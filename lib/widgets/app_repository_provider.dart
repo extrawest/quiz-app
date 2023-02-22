@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive/hive.dart';
+import 'package:quiz_app/data/models/quiz_history_model.dart';
 
 import '../data/mappers/boolean_quiz_mapper.dart';
 import '../data/mappers/multi_options_quiz_mapper.dart';
@@ -28,7 +30,9 @@ class AppRepositoryProvider extends StatelessWidget {
           ),
         ),
         RepositoryProvider<HistoryRepository>(
-          create: (context) => HistoryRepositoryImpl(),
+          create: (context) => HistoryRepositoryImpl(
+            box: Hive.box(QuizHistoryModel.boxName),
+          ),
         ),
       ],
       child: child,

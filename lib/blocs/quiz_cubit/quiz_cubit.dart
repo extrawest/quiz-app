@@ -53,6 +53,9 @@ class QuizCubit extends Cubit<QuizState> {
         quizes: List.of(quizes)..removeLast(),
       ),
     );
+    if (state.currentQuiz == null) {
+      completeQuiz();
+    }
   }
 
   Future<void> completeQuiz() async {

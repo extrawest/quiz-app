@@ -24,6 +24,12 @@ class _HistoryScreen extends StatefulWidget {
 
 class __HistoryScreenState extends State<_HistoryScreen> {
   @override
+  void initState() {
+    super.initState();
+    context.read<HistoryCubit>().loadHistory();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return const Scaffold();
   }

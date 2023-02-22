@@ -1,16 +1,19 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 
-part 'quiz_result_model.freezed.dart';
 part 'quiz_result_model.g.dart';
 
-@freezed
-class QuizResultModel with _$QuizResultModel {
-  const factory QuizResultModel({
-    required String question,
-    required String answer,
-    required bool isRight,
-  }) = _QuizResultModel;
+@HiveType(typeId: 0)
+class QuizResultModel {
+  const QuizResultModel({
+    required this.question,
+    required this.answer,
+    required this.isRight,
+  });
 
-  factory QuizResultModel.fromJson(Map<String, dynamic> json) =>
-      _$QuizResultModelFromJson(json);
+  @HiveField(0)
+  final String question;
+  @HiveField(1)
+  final String answer;
+  @HiveField(2)
+  final bool isRight;
 }
