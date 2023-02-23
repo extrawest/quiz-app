@@ -8,13 +8,13 @@ part 'history_state.freezed.dart';
 @freezed
 class HistoryState with _$HistoryState {
   const factory HistoryState({
-    required List<QuizHistoryModel>? history,
+    required List<QuizHistoryModel> history,
     required bool isLoading,
     required Failure? failure,
   }) = _HistoryState;
 
   factory HistoryState.initial() => const HistoryState(
-        history: null,
+        history: [],
         failure: null,
         isLoading: false,
       );

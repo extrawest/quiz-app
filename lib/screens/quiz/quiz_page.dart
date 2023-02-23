@@ -58,7 +58,7 @@ class __QuizScreenState extends State<_QuizScreen> {
             }
             final quiz = state.currentQuiz;
             if (quiz == null) {
-              return const Text('You passed all quizes!');
+              return const Center(child: Text('You passed all quizes!'));
             }
             return Padding(
               padding: const EdgeInsets.all(16),

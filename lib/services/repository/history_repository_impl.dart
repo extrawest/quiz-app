@@ -17,7 +17,7 @@ class HistoryRepositoryImpl extends HistoryRepository {
   Future<Either<Failure, List<QuizHistoryModel>>> restoreQuizHistory() async {
     try {
       final quizHistory = _box.keys.map(_box.get).whereNotNull().toList();
-      return Right(quizHistory);
+      return Right(quizHistory.reversed.toList());
     } catch (e) {
       return Left(Failure(message: e.toString()));
     }

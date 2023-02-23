@@ -18,5 +18,7 @@ class QuizHistoryModel {
 
   String get key => date.toIso8601String();
 
+  int get rightCount => quizes.where((quiz) => quiz.isRight).length;
+
   static const boxName = 'quizes';
 }
