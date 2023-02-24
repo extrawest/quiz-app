@@ -48,7 +48,12 @@ class __HistoryScreenState extends State<_HistoryScreen> {
             );
           }
           if (state.history.isEmpty) {
-            return const Center(child: Text('History is empty'));
+            return const Center(
+              child: Text(
+                'History is empty',
+                style: TextStyle(fontSize: 32),
+              ),
+            );
           }
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 0.0),
@@ -56,7 +61,6 @@ class __HistoryScreenState extends State<_HistoryScreen> {
               children: state.history
                   .map(
                     (historyItem) => QuizHistoryTile(
-                      onPressed: () {},
                       historyItem: historyItem,
                     ),
                   )

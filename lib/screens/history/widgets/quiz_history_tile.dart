@@ -7,11 +7,9 @@ import 'package:quiz_app/utils/iterable_join_with.dart';
 class QuizHistoryTile extends StatelessWidget {
   const QuizHistoryTile({
     super.key,
-    required this.onPressed,
     required this.historyItem,
   });
 
-  final VoidCallback onPressed;
   final QuizHistoryModel historyItem;
 
   @override
