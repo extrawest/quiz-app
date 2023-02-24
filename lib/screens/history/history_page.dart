@@ -47,6 +47,17 @@ class __HistoryScreenState extends State<_HistoryScreen> {
               child: CircularProgressIndicator(),
             );
           }
+
+          final failure = state.failure;
+          if (failure != null) {
+            return Center(
+              child: Text(
+                'Error: ${failure.message}',
+                style: const TextStyle(fontSize: 32),
+              ),
+            );
+          }
+
           if (state.history.isEmpty) {
             return const Center(
               child: Text(

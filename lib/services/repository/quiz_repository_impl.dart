@@ -31,8 +31,6 @@ class QuizRepositoryImpl extends QuizRepository {
     try {
       final quizes = await _retreiveQuizesForType(quizeType);
       return Right(quizes);
-    } on DioError catch (error) {
-      return Left(Failure(message: error.message ?? ''));
     } catch (e) {
       return Left(Failure(message: e.toString()));
     }

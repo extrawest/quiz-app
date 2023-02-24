@@ -56,6 +56,16 @@ class __QuizScreenState extends State<_QuizScreen> {
                 child: CircularProgressIndicator(),
               );
             }
+            final failure = state.failure;
+            if (failure != null) {
+              return Center(
+                child: Text(
+                  'Error: ${failure.message}',
+                  style: const TextStyle(fontSize: 32),
+                ),
+              );
+            }
+
             final quiz = state.currentQuiz;
             if (quiz == null) {
               return const Center(
