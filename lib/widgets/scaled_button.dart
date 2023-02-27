@@ -37,8 +37,6 @@ class _ScaledButtonState extends State<ScaledButton>
     );
   }
 
-  bool isPressed = false;
-
   @override
   void dispose() {
     _scaleController.dispose();
@@ -52,22 +50,13 @@ class _ScaledButtonState extends State<ScaledButton>
       child: GestureDetector(
         onTapDown: (_) {
           _scaleController.forward();
-          setState(() {
-            isPressed = true;
-          });
         },
         onTapUp: (_) {
           _scaleController.reverse();
-          setState(() {
-            isPressed = false;
-          });
           widget.onPressed();
         },
         onTapCancel: () {
           _scaleController.reverse();
-          setState(() {
-            isPressed = false;
-          });
         },
         child: widget.child,
       ),
