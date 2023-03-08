@@ -1,4 +1,10 @@
 # Flutter Quiz App
+[
+![Maintanence](https://img.shields.io/badge/Maintenance-yes%3F-blue.svg)]()
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)]()
+![GitHub release](https://img.shields.io/badge/release-v1.0.0-blue)
+![Supported Programs](https://img.shields.io/badge/Platform-Android%20|%20iOS%20|%20Web%20%20-blue.svg?logo=flutter)
+[![View DEMO](https://img.shields.io/badge/VIEW-DEMO-lightgreen.svg)](https://user-images.githubusercontent.com/126390137/221521083-555c9273-9a30-4c0e-821f-f8ac29659b76.mov)
 
 ## Project info 
 - This project is an app that provides simple quiz game functionality
